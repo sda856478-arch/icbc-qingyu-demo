@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#bb1832">
+  <meta name="description" content="工银青誉计划交互演示：学生认证、荣誉档案、授权核验与奖金周转申请。">
+  <title>工银青誉计划 · 交互小样</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23bb1832'/%3E%3Cpath d='M10 9h12v4H10zm0 6h12v4H10zm0 6h9v3h-9z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="demo-bar">
+    <div class="demo-label"><span class="demo-dot"></span><strong>交互小样</strong><span class="demo-desc">示例数据 · 未连接银行或高校系统</span></div>
+    <div class="demo-actions"><button id="restart-auth" class="demo-button">从认证开始</button><button id="reset-demo" class="demo-button">重置演示</button></div>
+  </div>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主要导航">
+      <a class="brand" href="#archive" aria-label="工银青誉计划首页"><span class="brand-mark">誉</span><span>工银青誉计划<small>QINGYU PLAN</small></span></a>
+      <nav class="navigation" id="desktop-nav"></nav>
+      <div class="sidebar-bottom"><span class="side-code">01 / YOUTH & HONOR</span><p>每一份努力，<br>都有迹可循。</p><div class="side-rule"></div><span class="side-note">你的荣誉，你来决定如何展示。</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark">誉</span><strong>工银青誉计划</strong></div><span class="topbar-context">成长档案 · 由你掌握</span><div class="view-toggle" role="group" aria-label="切换演示视角"><button id="student-view" class="selected">学生视角</button><button id="enterprise-view">企业视角</button></div><button class="profile-mini" id="profile-button" aria-label="查看学生认证"><span>陈</span><b>陈同学</b></button></header>
+      <div class="content-grid">
+        <main id="main-content"><div class="initial-view"><span class="eyebrow">MY HONOR ARCHIVE</span><h1>我的荣誉档案<span class="title-dot">.</span></h1><p>奖项、论文、专利，在这里记录。</p></div></main>
+        <aside id="context-panel" class="context-panel" aria-label="档案信息"></aside>
+      </div>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="移动端主要导航"></nav>
+  <dialog id="app-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
